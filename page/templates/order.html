@@ -84,15 +84,16 @@
     <div class="album py-5 bg-light">
         <div class="container">
             <div class="row">
+                {% for chicken in chickens %}
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <!-- 카드 이미지 -->
-                        <img src="images/blackmayo.PNG" width="100%" alt="">
+                        <!-- 카드 이미지 객체 image url-->
+                        <img src="{{ chicken.image.url }}" width="100%" alt="Chicken_Image">
                         <div class="card-body">
                             <!-- 메뉴 이름 텍스트 -->
-                            <p class="card-text"><h2>블랙마요</h2></p>
+                            <p class="card-text"><h2>{{ chicken.name }}</h2></p>
                             <!-- 메뉴 설명 텍스트 -->
-                            <p class="card-text">메뉴설명</p>
+                            <p class="card-text">{{ chicken.description }}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-danger">담아두기</button>
@@ -101,9 +102,11 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+    
     </main>
 
     <footer class="container">

@@ -125,5 +125,5 @@ STATICFILES_DIRS =[
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') # 개발자 관리 파일들
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 사용자가 업로드한 파일관리
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 사용자가 업로드한 파일관리
