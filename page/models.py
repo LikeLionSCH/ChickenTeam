@@ -6,3 +6,6 @@ class Chicken(models.Model):
     name = models.CharField(max_length=50) # 치킨이름
     money = models.IntegerField() # 치킨가격
     description = models.TextField() # 치킨설명
+
+    def __str__(self):
+        return self.name
