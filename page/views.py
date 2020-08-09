@@ -8,5 +8,8 @@ def order(request):
     chickens = Chicken.objects.all()
     return render(request, 'order.html', {'chickens':chickens})
 
+def about(request):
+    return render(request, 'about.html')
+
 # def delete(request, chicken_id):
 #     return redirect()
