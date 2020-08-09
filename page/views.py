@@ -17,5 +17,7 @@ def contain(request):
 def finish(request):
     return render(request, 'finish.html')
 
+def cart(request):
+    return render(request, 'cart.html')
 # def delete(request, chicken_id):
 #     return redirect()
