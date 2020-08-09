@@ -5,4 +5,8 @@ def cover(request):
     return render(request, 'cover.html')
 
 def order(request):
-    return render(request, 'order.html')
+    chickens = Chicken.objects.all()
+    return render(request, 'order.html', {'chickens':chickens})
+
+# def delete(request, chicken_id):
+#     return redirect()
