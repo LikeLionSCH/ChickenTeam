@@ -14,5 +14,8 @@ def about(request): # about 페이지 이동
 def contain(request):
     return redirect('order')
 
+def finish(request):
+    return render(request, 'finish.html')
+
 # def delete(request, chicken_id):
 #     return redirect()
